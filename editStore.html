@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- JS -->
+  <script src="js-bootstrap/bootstrap.bundle.min.js "></script>
+  <script src="js/validateForm.js"></script>
+  <script src="js/custom-scripts.js"></script>
+  <link rel="shortcut icon" href="#">
+  <title>theFullstackFamily_</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">theFullstackFamily_ </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="welcome.html" class="nav-link px-2 text-white">Bienvenid@</a></li>
+            <li><a href="courses.html" class="nav-link px-2 text-white">Cursos</a></li>
+            <li><a href="dashboard.html" class="nav-link px-2 text-white">Recursos</a></li>
+          </ul>
+
+          <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
+          </form> -->
+
+          <div class="text-end">
+            <a class="btn btn-outline-light me-2" href="signin.html" role="button">Comenzar</a>
+            <a class="btn btn-warning" href="register.html" role="button">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainContainer">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    </div>
+
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="container col-xl-10 col-xxl-8 px-4 py-0">
+          <div class="row align-items-center g-5 py-0">
+            <div class="col-lg-7 text-center text-lg-start">
+              
+            </div>
+
+            <div class="col-12 mx-auto col-lg-10">
+              <form action="dashboard.html" method="get" onsubmit="onClickInsert(${item.id})"
+                class="p-5 border rounded-3 bg-light" novalidate>
+
+                <p id="informId" style="color: red"></p>
+
+                <label for="nombre">Identificador</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Identificador"
+                  onchange="onValidateName(this.value)" onclick="" class="form-control" autocomplete>
+
+                <label for="apellidos">Nombre</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Indique su/s apellido/s."
+                  onchange="onValidateSurnames(this.value)" onclick="" class="form-control" autocomplete>
+
+                  <label for="apellidos">Descripción</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Descripción"
+                  onchange="onValidateSurnames(this.value)" onclick="" class="form-control" autocomplete>
+
+
+                <label for="edad">Precio</label>
+                <input type="text" name="edad" id="edad" size="5" placeholder="Precio"
+                  onchange="onValidateAge(this.value)" onclick="" class="form-control" autocomplete>
+
+                <div class="checkbox mb-3 py-2">
+                  <input type="checkbox" name="condiciones" id="checkboxId">
+                  <small>En Stock</small>
+                </div>
+
+                <input type="submit" value="Enviar Datos" class="w-100 btn btn-lg btn-primary">
+
+                <hr class="my-4">
+
+                <input type="reset" value="Limpiar Datos" class="w-100 btn btn-lg btn-secondary">
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider">
+
+    </div><!-- / aquí finaliza .container marketing-->
+  </main>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">volver</a></p>
+    <p>&copy; 2021 theFullstackFamily_, Inc. &middot; <a href="#">Licencia GNU-GPL</a> &middot; <a href="#">Sobre
+        Nosotros</a></p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>theFullstackFamily_</title>
+  <!-- SCRIPTS -->
+  <script src="js/client.js"></script>
+  <script src="js/getStore.js"></script>
+  <script src="js/searchMenu.js"></script>
+  <script src="js/custom-scripts.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">theFullstackFamily_ </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="welcome.html" class="nav-link px-2 text-white">Bienvenid@</a></li>
+            <li><a href="courses.html" class="nav-link px-2 text-white">Cursos</a></li>
+            <li><a href="dashboard.html" class="nav-link px-2 text-white">Dashboard</a></li>
+          </ul>
+
+
+          <div class="text-end">
+            <button class="btn me-2" onclick="onToggleNightMode()">
+              <img src="images/whte-dark-mode.png" alt="dark-mode icon">
+            </button>
+            <a class="btn btn-outline-light me-2" href="signin.html" role="button">Comenzar</a>
+            <a class="btn btn-warning" href="register.html" role="button">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+
+                <span data-feather="home"></span>
+                <p id="mainPanelId"></p>
+              </a>
+            </li>
+
+            <input type="search" id="searchId" onkeyup="onSearchMenu()" class="form-control form-control"
+              placeholder="Buscar..." autofocus>
+
+            <ul id="myMenu">
+              <li class="nav-item" id="searchId">
+                <a class="nav-link" href="#">
+                  <span data-feather="file"></span>
+                  Temas
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Precios
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Coworking
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reportes
+                </a>
+              </li>
+
+              <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Abril
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Marzo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Marzo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Febrero
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Enero
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Diciembre
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Noviembre
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Septiembre
+                  </a>
+                </li>
+              </ul>
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+        <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+
+        <div class="table-responsive my-4">
+          <div class="flexContainer">
+            <h1 id="storeNameId">Gestión de Proyecto</h1>
+            <a class="link-secondary" href="#" aria-label="Add a new report" onclick="onClickInsert()">
+              <span data-feather="plus-circle"></span>
+            </a>
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3
+              border-bottom">
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group me-2">
+                  <button type="button" class="btn  btn-outline-secondary" onclick="onShowWindow()">Editar</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="print()">Exportar</button>
+                </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="alert(Date())">
+                    <span data-feather="calendar"></span>
+                  </button>
+                  <button type="button" id="storeAddressId" class="btn btn-sm btn-outline-secondary" onclick="">
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+
+            <table class="table table-striped table-sm dark-mode" id="tableId">
+
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+    <script src="js-bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script> -->
+    <script src="js/dashboard.js"></script>
+    </script>
+
+</body>
+
+</html>

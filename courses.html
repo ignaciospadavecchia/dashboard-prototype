@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <!-- CSS -->
+  <link href="css/carousel.css" rel="stylesheet">
+  <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JS -->
+  <script src="js-bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/custom-scripts.js"></script>
+  <title>theFullstackFamily_</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">theFullstackFamily_  </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="welcome.html" class="nav-link px-2 text-white">Bienvenid@</a></li>
+            <li><a href="courses.html" class="nav-link px-2 text-white">Cursos</a></li>
+            <li><a href="dashboard.html" class="nav-link px-2 text-white">Dashboard</a></li>
+          </ul>
+
+          <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
+          </form> -->
+
+          <div class="text-end">
+            <button class="btn me-2" onclick="onToggleNightMode()">
+              <img src="images/whte-dark-mode.png" alt="">
+            </button>
+            <a class="btn btn-outline-light me-2" href="signin.html" role="button">Comenzar</a>
+            <a class="btn btn-warning" href="register.html" role="button">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainContainer">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- No quitar -->
+    </div>
+
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777" fill-opacity="0.1"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            <image width="100%" height="100%" xlink:href="images/html-css.png"></image>
+          </svg>
+
+          <h2>MF0491_3 Programacion web en el entorno cliente</h2>
+          <p>HTML & CSS </p>
+          <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            
+            <rect width="100%" height="100%" fill="#f0dc3f" fill-opacity="" /><text x="50%" y="50%" fill="#777" dy=".3em"></text>
+            <image width="100%" height="100%" xlink:href="images/javascript.jpg"></image>
+            
+          </svg>
+
+          <h2>MF041:3 Programación web en el entorno servidor</h2>
+          <p>Introducción a Javascript</p>
+          <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777" fill-opacity="0.1"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            <image width="100%" height="100%" xlink:href="images/node4.jpg"></image>
+          </svg>
+
+          <h2>MF0562:1 Desarrollo e Implementación de Aplicaciónes Web</h2>
+          <p>Java + Node.js + MongoDB </p>
+          <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      </div>
+
+      <hr class="featurette-divider">
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- / aquí finaliza .container -->
+  </main>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">volver</a></p>
+    <p>&copy; 2021 theFullstackFamily_, Inc. &middot; <a href="#">Licencia GNU-GPL</a> &middot; <a href="#">Sobre
+        Nosotros</a></p>
+  </footer>
+ 
+</body>
+
+</html>
